@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeRush - Professional Speed Typing Test</title>
+    <meta name="description"
+        content="Test your typing speed and accuracy with TypeRush. A professional, fast, and interactive typing test application.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button class="theme-toggle" id="themeToggle" title="Toggle Theme">🌙</button>
+
+    <div class="container">
+        <header>
+            <h1>🚀 TypeRush</h1>
+            <p class="subtitle">Elevate your typing skills with professional precision.</p>
+        </header>
+
+        <main>
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-value" id="wpm">0</span>
+                    <span class="stat-label">WPM</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value" id="accuracy">100%</span>
+                    <span class="stat-label">Accuracy</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value" id="cpm">0</span>
+                    <span class="stat-label">CPM</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value" id="timer">60s</span>
+                    <span class="stat-label">Time Left</span>
+                </div>
+            </section>
+
+            <div class="typing-box">
+                <div class="text-display" id="textDisplay">
+                    <!-- Text will be rendered here via JS -->
+                </div>
+                <input type="text" id="userInput" class="input-field" placeholder="Click 'Start Test' and type here..."
+                    autocomplete="off" disabled>
+            </div>
+
+            <div class="controls">
+                <button id="startBtn" class="btn btn-primary">
+                    <span>▶</span> Start Test
+                </button>
+                <button id="resetBtn" class="btn btn-secondary">
+                    <span>↺</span> Reset
+                </button>
+            </div>
+
+            <div class="settings">
+                <div class="setting-item">
+                    <label for="difficultySelect">Difficulty:</label>
+                    <select id="difficultySelect">
+                        <option value="easy">Easy</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <div class="setting-item">
+                    <label for="timeSelect">Timer:</label>
+                    <select id="timeSelect">
+                        <option value="30">30s</option>
+                        <option value="60" selected>60s</option>
+                        <option value="120">120s</option>
+                        <option value="180">180s</option>
+                    </select>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Result Overlay -->
+    <div class="overlay" id="overlay">
+        <div class="result-card">
+            <h2>🎉 Test Complete!</h2>
+            <p>You did an amazing job. Here are your stats:</p>
+            <div class="stats-grid" style="margin-top: 20px;">
+                <div class="stat-card">
+                    <span class="stat-value" id="finalWpm">0</span>
+                    <span class="stat-label">Final WPM</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value" id="finalAccuracy">0%</span>
+                    <span class="stat-label">Final Accuracy</span>
+                </div>
+            </div>
+            <div class="controls">
+                <button onclick="app.resetTest()" class="btn btn-primary">Try Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
