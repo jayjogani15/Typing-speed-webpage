@@ -29,11 +29,3 @@ git clone https://github.com/yourusername/typerush.git
 cd typerush
 open index.html
 ```
-
-## 📸 Preview
-
-*(Add screenshots here)*
-
-## 📄 License
-
-This project is open-source and available under the MIT License.
